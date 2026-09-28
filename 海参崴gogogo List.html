@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海参崴出行核对清单</title>
+    <style>
+        *{box-sizing:border-box;font-family:system-ui, sans-serif;}
+        body{max-width:820px;margin:2rem auto;padding:0 1rem;background:#f8f9fa;color:#222;}
+        h1{text-align:center;color:#2c3e50;font-size:23px;margin-bottom:24px;}
+        .section{background:#fff;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px #00000018;}
+        .section h2{font-size:18px;margin:0 0 14px;color:#34495e;}
+        .item{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:15px;}
+        .item input{margin-top:3px;transform:scale(1.15);cursor:pointer;}
+        .remark{font-size:13px;color:#666;margin-left:28px;margin-top:3px;line-height:1.4;}
+        .tip{background:#fff3cd;padding:14px;border-radius:8px;margin-top:22px;font-size:14px;color:#856404;line-height:1.5;}
+        .ctrl-bar{text-align:center;margin-bottom:16px;}
+        button{padding:6px 14px;font-size:14px;border-radius:6px;border:none;background:#34495e;color:#fff;cursor:pointer;margin:0 4px;}
+    </style>
+</head>
+<body>
+    <h1>海参崴出行核对清单</h1>
+    <div class="ctrl-bar">
+        <button id="resetBtn">清空全部勾选</button>
+    </div>
+
+    <div class="section">
+        <h2>📄 证件材料</h2>
+        <div class="item">
+            <input type="checkbox" id="i1">
+            <label for="i1">护照（记得手机拍照）</label>
+        </div>
+        <div class="remark">备注：照片存手机+网盘备份，护照有效期≥6个月</div>
+        <div class="item">
+            <input type="checkbox" id="i2">
+            <label for="i2">身份证</label>
+        </div>
+        <div class="remark">备注：仅国内交通使用，俄罗斯境内不需要</div>
+        <div class="item">
+            <input type="checkbox" id="i3">
+            <label for="i3">入境白条</label>
+        </div>
+        <div class="remark">备注：出境必须上交，务必妥善保管，拍照备份；飞机上填写最稳妥，机场边检一般不提供笔</div>
+        <div class="item">
+            <input type="checkbox" id="i4">
+            <label for="i4">返程机票/酒店预订单</label>
+        </div>
+        <div class="remark">备注：保存PDF，建议同时打印一份备用，海关可能抽查</div>
+    </div>
+    <div class="section">
+        <h2>📶 网络 & 现金</h2>
+        <div class="item">
+            <input type="checkbox" id="i5">
+            <label for="i5">电话卡/流量包</label>
+        </div>
+        <div class="remark">备注：落地后再插卡</div>
+        <div class="item">
+            <input type="checkbox" id="i6">
+            <label for="i6">现金（卢布）</label>
+        </div>
+        <div class="remark">备注：优先兑换50/100/500小额零钱；小摊、公厕大多只收现金</div>
+    </div>
+    <div class="section">
+        <h2>🔌 电子配件</h2>
+        <div class="item">
+            <input type="checkbox" id="i7">
+            <label for="i7">转换插头（德标两孔圆柱）（+插排）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i8">
+            <label for="i8">充电器及充电线</label>
+        </div>
+    </div>
+    <div class="section">
+        <h2>🧴 洗漱用品</h2>
+        <div class="item">
+            <input type="checkbox" id="i9">
+            <label for="i9">纸巾</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i10">
+            <label for="i10">洗脸巾</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i11">
+            <label for="i11">牙膏牙刷</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i12">
+            <label for="i12">拖鞋</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i13">
+            <label for="i13">沐浴露</label>
+        </div>
+        <div class="remark">备注：当地酒店大多不提供一次性牙具、拖鞋，建议自备</div>
+    </div>
+    <div class="section">
+        <h2>🌤️ 防护装备</h2>
+        <div class="item">
+            <input type="checkbox" id="i14">
+            <label for="i14">防雨（雨伞/雨衣）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i15">
+            <label for="i15">防风（外套）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i16">
+            <label for="i16">防晒（防晒霜）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i17">
+            <label for="i17">防干燥（保湿霜）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i18">
+            <label for="i18">防没电（充电宝）</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i19">
+            <label for="i19">防没笔（笔）</label>
+        </div>
+        <div class="remark">备注：海边风力巨大，普通雨伞容易吹坏；托比津纳海角海风冷，夏季也需要防风外套；机场边检不提供笔，自备填写入境白条；充电宝随身不可托运</div>
+    </div>
+    <div class="section">
+        <h2>💊 健康药品</h2>
+        <div class="item">
+            <input type="checkbox" id="i20">
+            <label for="i20">口罩</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i21">
+            <label for="i21">感冒药</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i22">
+            <label for="i22">肠胃药</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i23">
+            <label for="i23">创可贴</label>
+        </div>
+        <div class="remark">备注：少量自用，保留原包装；不要携带大量中成药</div>
+    </div>
+    <div class="section">
+        <h2>📱 手机APP（提前安装）</h2>
+        <div class="item">
+            <input type="checkbox" id="i24">
+            <label for="i24">打车 YandexGo</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i25">
+            <label for="i25">地图 Yandex Maps</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="i26">
+            <label for="i26">翻译 Google离线俄语翻译</label>
+        </div>
+        <div class="remark">备注：托比津纳海角部分区域手机信号较差，提前下载离线包</div>
+    </div>
+
+<script>
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+// 读取本地存储恢复勾选
+function loadState(){
+    checkboxes.forEach(cb=>{
+        const key = 'check_'+cb.id;
+        const val = localStorage.getItem(key);
+        cb.checked = val === '1';
+    })
+}
+// 保存勾选状态
+function saveState(cb){
+    const key = 'check_'+cb.id;
+    localStorage.setItem(key, cb.checked ? '1':'0');
+}
+// 绑定事件
+checkboxes.forEach(cb=>{
+    cb.addEventListener('change',()=>saveState(cb));
+})
+// 重置按钮
+document.getElementById('resetBtn').addEventListener('click',()=>{
+    checkboxes.forEach(cb=>{
+        cb.checked = false;
+        localStorage.removeItem('check_'+cb.id);
+    })
+})
+// 页面加载恢复
+loadState();
+</script>
+</body>
+</html>
